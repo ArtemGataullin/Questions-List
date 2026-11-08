@@ -23,6 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@/*": ["./src/*"],
+      "@app": ["./src/app/*"],
       "@ui/*": ["./src/shared/ui/*"],
       "@widgets/*": ["./src/widgets/*"],
       "@assets/*": ["./src/assets/*"],

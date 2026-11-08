@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto, sans-serif;
+  border: none;
+}
+
+.whiteBgButton {
+  background-color: transparent;
+  color: #6A0BFF;
+}
+
+.PurpleBgButton {
+  color: #FFFFFF;
+  background-color: #6A0BFF;
+}
