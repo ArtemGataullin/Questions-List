@@ -1,8 +1,12 @@
+import type { ReactNode } from "react";
+
 export interface ButtonsProps {
-    text: string | number,
+    children?: string | number | ReactNode;
     onClick?: () => void,
     variant: 'whiteBgButton' | 'PurpleBgButton',
-    size: 'L' | 'M' | '',
+    size: 'L' | 'M' | 'S',
     type: 'submit' | 'button',
-    className?: string
+    className?: string,
+    iconLeft?: ReactNode,
+    iconRight?: ReactNode,
 }

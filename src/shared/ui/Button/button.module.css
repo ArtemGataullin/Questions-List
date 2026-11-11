@@ -2,13 +2,11 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  height: 48px;
   border-radius: 12px;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: Roboto, sans-serif;
-  border: none;
+  font-size: 18px;
+  line-height: 100%;
+  font-family: inherit;
+  font-weight: 500;
 }
 
 .whiteBgButton {
@@ -16,7 +14,42 @@
   color: #6A0BFF;
 }
 
+.whiteBgButton:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .PurpleBgButton {
   color: #FFFFFF;
   background-color: #6A0BFF;
+}
+
+.PurpleBgButton:hover {
+  background-color: #5A09D9;
+}
+
+.M {
+  padding: 11.5px 28.5px;
+  height: 48px;
+  width: 170px;
+}
+.L {
+  padding: 15px 26px;
+  height: 18px;
+}
+
+.S {
+  width: 24px;
+  height: 24px;
+}
+
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: inherit;
+  width: 24px;
+  height: 24px;
+  padding-left: 12px;
 }

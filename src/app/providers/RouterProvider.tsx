@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import { lazy, Suspense } from 'react'
 import {Layout} from "../layout/Layout";
-import { ROUTES } from "@/shared/lib/constants";
+import { ROUTES_CONFIG } from "@/shared/config/routes/routesConfig";
 
 const ListQuestions = lazy(() => import('@/pages/ListQuestions'))
 const Collections = lazy(() => import('@/pages/Collections'))
@@ -16,10 +16,10 @@ export function AppRouter () {
             <Suspense fallback={<div>Загрузка...</div>}>
                 <Routes>
                     <Route element={<Layout/>}>
-                        <Route path={ROUTES.listQuestions} element={<ListQuestions />}></Route>
-                        <Route path={ROUTES.Collection} element={<Collections />}></Route>
-                        <Route path={ROUTES.Question} element={<Question />}></Route>
-                        <Route path={ROUTES.CollectionQuestion} element={<CollectionQuestion />}></Route>
+                        <Route path={ROUTES_CONFIG.listQuestions} element={<ListQuestions />}></Route>
+                        <Route path={ROUTES_CONFIG.Question} element={<Question />}></Route>
+                        <Route path={ROUTES_CONFIG.Collection} element={<Collections />}></Route>
+                        <Route path={ROUTES_CONFIG.CollectionQuestion} element={<CollectionQuestion />}></Route>
                         <Route path="*" element={<NotFoundPage />} />
                         <Route path="/500" element={<NotServerPage />} />
                     </Route>

@@ -1,12 +1,14 @@
 import { type ButtonsProps } from "./types";
 import styles from "./button.module.css";
 export function Button({
-  text,
   onClick,
   variant,
   size,
   type = "button",
   className,
+  children,
+  iconLeft,
+  iconRight
 }: ButtonsProps) {
   return (
     <button
@@ -14,7 +16,9 @@ export function Button({
       type={type}
       className={`${styles.button} ${styles[variant]} ${styles[size]} ${className ?? ""}`}
     >
-      {text}
+      {iconLeft && <span className="button__icon">{iconLeft}</span>}
+      {children}
+      {iconRight && <span className="button__icon">{iconRight}</span>}
     </button>
   );
 }

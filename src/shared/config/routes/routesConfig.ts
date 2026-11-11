@@ -1,4 +1,4 @@
-export const ROUTES = {
+export const ROUTES_CONFIG = {
   listQuestions: '/listQuestions',
   Question: '/listQuestions/:id',
   Collection: '/collection',

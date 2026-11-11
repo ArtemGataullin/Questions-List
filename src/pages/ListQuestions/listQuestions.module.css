@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 41px 112px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  border-bottom: 0.5px rgba(232, 232, 232, 1) solid;
+  padding-bottom: 17px;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  padding: 24px 20px;
+  font-family: inherit;
+  gap: 24px;
+  border-radius: 24px;
+}
+
+.list {
+  flex-direction: column;
+  display: flex;
+  gap: 24px;
+}

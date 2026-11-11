@@ -2,10 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 15.5px 112px;
+  font-family: inherit;
 }
 
 .conteinerLeft {
   display: flex;
+  gap: 40px;
 }
 
 .nav {
@@ -17,5 +20,11 @@
 .list {
   display: flex;
   gap: 20px;
-  list-style: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.headerNavLink {
+  color: var(--black-900);
 }
