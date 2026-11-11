@@ -1,33 +1,31 @@
-.icon {
-  transition: transform 0.3s ease-in-out; /* Плавная анимация */
-  will-change: transform; /* Подсказка браузеру для оптимизации анимации */
+.toggleIcon {
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
 }
 
-/* Класс, который поворачивает иконку */
-.isOpenIcon {
+.toggleIconActive {
   transform: rotate(180deg);
 }
 
-.container {
+.card {
   display: flex;
   flex-direction: column;
   padding: 16px 24px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 10px rgba(106, 99, 118, 0.1);
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(106, 99, 118, 0.1);
   border-radius: 8px;
   gap: 24px;
 }
 
-.containerHeader {
+.cardHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.containerLeft {
+.cardTitleBlock {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 8px;
 }
 
@@ -37,21 +35,21 @@
   line-height: 120%;
 }
 
-.customMarker {
+.marker {
   width: 8px;
   height: 8px;
-  background-color: #6A0BFF; /* Фиолетовый */
-  border-radius: 50%; /* Круглый маркер */
-  flex-shrink: 0; /* Чтобы маркер не сжимался, если текст длинный */
+  background-color: #6a0bff;
+  border-radius: 50%;
+  flex-shrink: 0; 
 }
 
-.containerBody {
+.cardBody {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.scoreContainer {
+.metrics {
   display: flex;
   gap: 40px;
   font-weight: 600;
@@ -59,7 +57,7 @@
   line-height: 120%;
 }
 
-.score {
+.metricItem {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -68,13 +66,13 @@
   border-radius: 8px;
 }
 
-.scoreCounter {
+.metricValue {
   background-color: rgba(106, 11, 255, 1);
   padding: 2px 4px;
   border-radius: 4px;
   color: white;
 }
 
-.button {
+.detailsButton {
   margin-left: 88%;
 }
