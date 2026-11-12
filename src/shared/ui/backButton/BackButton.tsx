@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router"
 import { Button } from "@/shared/ui/Button";
-import ArrowLeft from "@assets/ArrowLeft.svg?react";
+import ArrowLeft from "@assets/ArrowLeftPurpli.svg?react";
 
 interface BackButtonProps {
   className: string

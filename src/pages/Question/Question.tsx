@@ -14,12 +14,12 @@ export default function Question() {
   const { data: questionData } = useGetQuestionsBySlugQuery(slug ?? skipToken);
   // const navigation = useQuestionNavigation()
 
+
   const [lastQuestion, setLastQuestion] = useState(questionData);
   if (questionData && questionData !== lastQuestion) {
     setLastQuestion(questionData);
   }
   const shownQuestion = questionData ?? lastQuestion;
-
 
   return (
     <div className={styles.container}>
@@ -34,8 +34,8 @@ export default function Question() {
         <QuestionDetailsNavigation
           className={styles.containerNavigate}
         />
-        <QuestionDetailsAnswer className={styles.content} title='краткий ответ' content={shownQuestion?.shortAnswer}/>
-        <QuestionDetailsAnswer className={styles.content} title='Развернутый ответ' content={shownQuestion?.longAnswer}/>
+        <QuestionDetailsAnswer className={styles.content} title='Краткий ответ' content={shownQuestion?.shortAnswer }/>
+        <QuestionDetailsAnswer className={styles.content} title='Развернутый ответ' content={shownQuestion?.longAnswer} collapsible/>
       </section>
 
       <QuestionDetailsSidebar

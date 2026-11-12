@@ -1,11 +1,11 @@
 import { useState } from "react";
 import type { QuestionProps } from "../model/type";
 import { Button } from "@/shared/ui/Button";
-import ChevroneDown from "@assets/Chevrone_Down.svg?react";
+import ChevroneDown from "@assets/ArrowUp.svg?react";
 import styles from "./questionsCard.module.css";
 import { RichContent } from "@/shared/ui/richContent/RichContent";
 import { Link, useLocation, } from "react-router";
-import ArrowRight from "@assets/ArrowRight.svg?react";
+import ArrowRight from "@assets/ArrowRightLine.svg?react";
 import { ROUTES_CONFIG } from "@/shared/config/routes/routesConfig";
 
 export const QuestionsCard = ({

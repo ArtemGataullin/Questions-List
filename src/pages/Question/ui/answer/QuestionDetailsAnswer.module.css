@@ -1,3 +1,63 @@
 .container {
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 27px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    gap: 20px;
+    color: #303030;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    font-family: inherit;
+}
+
+.questionAnswerContent {
+    color: var(--black-800);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0;
+}
+
+.questionAnswerCollapse {
+    position: relative;
+}
+
+.questionAnswerCollapseCollapsed {
+    max-height: 240px;
+    overflow: hidden;
+}
+
+.questionAnswerCollapseCollapsed::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 96px;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0),
+            var(--white-900));
+    pointer-events: none;
+}
+
+.questionAnswerToggle {
+    align-self: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.questionAnswerToggle svg {
+    color: var(--purple-700);
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+}
+
+.questionAnswerToggleExpanded svg {
+    transform: rotate(0deg);
 }

@@ -9,7 +9,8 @@ export function Button({
   children,
   iconLeft,
   iconRight,
-  disabled
+  disabled,
+  ...rest
 }: ButtonsProps) {
   return (
     <button
@@ -17,6 +18,7 @@ export function Button({
       type={type}
       className={`${styles.button} ${styles[variant]} ${styles[size]} ${className ?? ""}`}
       disabled={disabled}
+      {...rest}
     >
       {iconLeft && <span className="button__icon">{iconLeft}</span>}
       {children}
