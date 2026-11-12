@@ -9,4 +9,5 @@ export interface ButtonsProps {
     className?: string,
     iconLeft?: ReactNode,
     iconRight?: ReactNode,
+    disabled?: boolean
 }

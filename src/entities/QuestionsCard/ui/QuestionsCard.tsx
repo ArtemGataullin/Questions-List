@@ -4,7 +4,7 @@ import { Button } from "@/shared/ui/Button";
 import ChevroneDown from "@assets/Chevrone_Down.svg?react";
 import styles from "./questionsCard.module.css";
 import { RichContent } from "@/shared/ui/richContent/RichContent";
-import { NavLink } from "react-router";
+import { Link, useLocation, } from "react-router";
 import ArrowRight from "@assets/ArrowRight.svg?react";
 import { ROUTES_CONFIG } from "@/shared/config/routes/routesConfig";
 
@@ -16,6 +16,7 @@ export const QuestionsCard = ({
   shortAnswer,
   slug,
 }: QuestionProps) => {
+  const { search } = useLocation()
   const [open, setOpen] = useState(false);
 
   return (
@@ -51,16 +52,17 @@ export const QuestionsCard = ({
           {img && <img src={img} alt="question-image" />}
 
           <RichContent content={shortAnswer} />
-
-          <Button
-            variant="whiteBgButton"
-            size="L"
-            type="button"
-            className={styles.detailsButton}
-            iconRight={<ArrowRight />}
-          >
-            <NavLink to={ROUTES_CONFIG.Question}>Подробнее</NavLink>
-          </Button>
+          <Link rel="stylesheet" to={{ pathname: `${ROUTES_CONFIG.listQuestions}/${slug}`, search}} >
+            <Button
+              variant="whiteBgButton"
+              size="L"
+              type="button"
+              className={styles.detailsButton}
+              iconRight={<ArrowRight />}
+            >
+            Подробнее
+            </Button>
+          </Link>
         </div>
       )}
     </li>

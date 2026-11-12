@@ -1,0 +1,32 @@
+.imgContainer {
+  display: flex;
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+}
+
+.img {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.containerTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 24px;
+  padding: 4px 0;
+}
+
+.description {
+  font-weight: 500;
+  line-height: 130%;
+  font-size: 16px;
+}
