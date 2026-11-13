@@ -1,4 +1,5 @@
 import type { Paginated } from "@/shared/api/types"
+import type { Skill } from "../skill/model/model"
 
 export interface Question {
   id: number,
@@ -15,6 +16,8 @@ export interface Question {
 }
 
 export type Questions = Paginated<Question>
+
+export type QuestionSkills = Skill
 
 export interface getQuestionsArg {
   page?: number,
@@ -34,4 +37,15 @@ export interface QuestionProps {
   img?: string,
   slug: string, 
   shortAnswer: string
+}
+
+export interface QuestionBySlug extends Question {
+    status: string
+    createdAt: string
+    updatedAt: string
+    questionSkills?: QuestionSkills[]
+    createdBy?: {
+        id: string
+        username: string
+    }
 }

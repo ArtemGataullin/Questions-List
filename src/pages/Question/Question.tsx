@@ -13,13 +13,15 @@ export default function Question() {
   const { slug } = useParams();
   const { data: questionData } = useGetQuestionsBySlugQuery(slug ?? skipToken);
   // const navigation = useQuestionNavigation()
-
+  
 
   const [lastQuestion, setLastQuestion] = useState(questionData);
   if (questionData && questionData !== lastQuestion) {
     setLastQuestion(questionData);
   }
   const shownQuestion = questionData ?? lastQuestion;
+
+  console.log(shownQuestion);
 
   return (
     <div className={styles.container}>
@@ -31,15 +33,18 @@ export default function Question() {
           imageSrc={shownQuestion?.imageSrc}
           className={styles.containerHeader}
         />
-        <QuestionDetailsNavigation
-          className={styles.containerNavigate}
-        />
+        <QuestionDetailsNavigation className={styles.containerNavigate}/>
         <QuestionDetailsAnswer className={styles.content} title='Краткий ответ' content={shownQuestion?.shortAnswer }/>
         <QuestionDetailsAnswer className={styles.content} title='Развернутый ответ' content={shownQuestion?.longAnswer} collapsible/>
       </section>
 
       <QuestionDetailsSidebar
         className={styles.containerSidebar}
+        rate={shownQuestion?.rate}
+        complexity={shownQuestion?.complexity}
+        questionSkills={shownQuestion?.questionSkills}
+        keywords={shownQuestion?.keywords}
+        authorUsername={shownQuestion?.createdBy?.username}
       />
     </div>
   );
